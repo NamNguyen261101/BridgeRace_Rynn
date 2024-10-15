@@ -31,4 +31,6 @@ public class PlayerController : Character
             ChangeAnim(AnimationState.idle);
         }*/
     }
+
+
 }

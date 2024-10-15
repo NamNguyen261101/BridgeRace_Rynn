@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using static Unity.VisualScripting.Dependencies.Sqlite.SQLite3;
 
 public class Character : ColorObject
 {
@@ -10,7 +13,6 @@ public class Character : ColorObject
     private AnimationState _animState;
 
     // Check Ground
-    [SerializeField] private float _moveSpeed;
     [SerializeField] private LayerMask _groundLayerMask, _stairlayerMask;
     private RaycastHit _hit;
 
@@ -53,7 +55,33 @@ public class Character : ColorObject
     {
         if (Physics.Raycast(nextPosition + Vector3.up, Vector3.down, out _hit, 2f, _stairlayerMask))
         {
+            if (nextPosition.z - TransformObject.position.z < 1)
+            {
+                return true;
+            }
+            /*else
+            {
+                if (hit.collider.GetComponent<ColorObject>().ColorType == ColorType)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (brickList.Count > 0)
+                    {
+                        RemoveBrick();
+                        hit.collider.GetComponent<ColorObject>().ChangeColor(ColorType);
 
+                        // Respawn a new Birck in current Stage
+                        stage.SpawnNewBrick(colorType);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }*/
         }
 
         return true;

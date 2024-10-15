@@ -17,7 +17,7 @@ public class JoyStick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HandleInput();
     }
 
     private void HandleInput()
@@ -35,16 +35,18 @@ public class JoyStick : MonoBehaviour
             _currentPosition = _mousePoisition;
             // calculate position of knob
             _knob.anchoredPosition = Vector3.ClampMagnitude((_currentPosition - _startPosition), _knobRange) + _startPosition;
-            Debug.Log("Test knob angle");
-
+            //Debug.Log("Test knob angle");
             _direction = (_currentPosition - _startPosition).normalized;
             _direction.z = _direction.y;
             _direction.y = 0;
         }
 
-
-
-
+        if (Input.GetMouseButtonUp(0))
+        {
+            _joystick.SetActive(false);
+            _direction = Vector3.zero;
+            //direction.y = 0;
+        }
 
     }
 }

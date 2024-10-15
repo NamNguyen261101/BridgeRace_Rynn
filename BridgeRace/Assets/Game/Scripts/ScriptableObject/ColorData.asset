@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ColorData
   m_EditorClassIdentifier: 
   colorMats:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d55caf3448591864ebae8c36193278da, type: 2}
+  - {fileID: 2100000, guid: d2ad9374af1d98e4197ed76c64759497, type: 2}
+  - {fileID: 2100000, guid: 29e403ea0ee4b1149a22c93b0159cd0d, type: 2}
+  - {fileID: 2100000, guid: 081deafa3807e6c499e43fd206b226b9, type: 2}
+  - {fileID: 2100000, guid: c1c04f7222bdf0843b47b44137539899, type: 2}
+  - {fileID: 2100000, guid: 844d0b73f1ba5a447afb76f23db50743, type: 2}
+  - {fileID: 2100000, guid: f13d7a235e330f640a9d3adbe4f40186, type: 2}
