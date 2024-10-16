@@ -4,40 +4,49 @@ using UnityEngine;
 
 public class PlayerMovementManager : Character
 {
-    [SerializeField] private VariableJoystick _joyStick;
-    [SerializeField] private float speed = 5.0f;
-    [SerializeField] private Canvas _inputCanvas;
-    public bool _isJoyStick;
+    [SerializeField] private FloatingJoystick _joystick;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _rotateSpeed;
 
+    [SerializeField] private Rigidbody _rigi;
+
+    private Vector3 _moveVector;
 
     private void Start()
     {
-        EnableJoyStickInput();
+       
     }
-    public void EnableJoyStickInput()
-    {
-        _isJoyStick = true;
-        _inputCanvas.gameObject.SetActive(true);
-    }
-
 
     private void Update()
     {
-        if (_isJoyStick) 
-        { 
-            var moveDirection = new Vector3(_joyStick.Direction.x, 0f, _joyStick.Direction.y);
+        Move();
+    }
 
-            // Vector3 nextPosition = TransformObject.position + _joyStick.Direction * Time.deltaTime * speed;
-            // Vector3 nextPosition = TransformObject.position * (speed * Time.deltaTime * _joyStick.Direction);
-            if (CanMove(moveDirection + Vector3.forward))
-            {
-                TransformObject.position = CheckGround(moveDirection);
-                //ChangeAnim(AnimationState.run);
-            }
-            if ((Vector3) _joyStick.Direction != Vector3.zero)
-            {
-                TransformObject.forward = _joyStick.Direction;
-            }
+    private void Move()
+    {
+        _moveVector = Vector3.zero;
+        _moveVector.x = _joystick.Horizontal * _moveSpeed * Time.deltaTime;
+        _moveVector.y = 0;
+        _moveVector.z = _joystick.Vertical * _moveSpeed * Time.deltaTime;
+
+       
+
+        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        {
+            Vector3 direction = Vector3.RotateTowards(transform.forward, _moveVector, _rotateSpeed * Time.deltaTime, 0.0f);
+            transform.rotation = Quaternion.LookRotation(direction);
+
+            // animation
+            //run
+        } 
+        else if (_joystick.Horizontal == 0 || _joystick.Vertical == 0)
+        {
+            // idle
         }
+        if (CanMove(_moveVector))
+        {
+            _rigi.MovePosition(_rigi.position + CheckGround(_moveVector));
+        }
+       
     }
 }

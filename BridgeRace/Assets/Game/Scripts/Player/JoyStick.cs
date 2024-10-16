@@ -10,11 +10,11 @@ public class JoyStick : MonoBehaviour
     [SerializeField] private RectTransform _background, _knob;
     [SerializeField] private float _knobRange;
     private Vector3 _startPosition, _currentPosition;
-    private Vector3 _screen; // _screen game
+    private Vector3 _screen; // screen game
 
     private Vector3 _mousePoisition => Input.mousePosition - _screen/2; // always separate screen view from any device
 
-    // Update is called once per frame
+
     void Update()
     {
         HandleInput();
