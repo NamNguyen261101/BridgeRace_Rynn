@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrickObjectData : ColorObject
+public class GroundBrick : ColorObject
 {
-    
+   
 }

@@ -23,6 +23,9 @@ public class Character : ColorObject
     [SerializeField] private Transform brickContainer;
     private float _brickHeight = 0.1f;
 
+    // Color Object - Depend for character and 
+    private ColorData _colorData;
+
     #endregion 
     void Start()
     {
@@ -120,9 +123,13 @@ public class Character : ColorObject
         }
             return false;
     }
-
-    private void AddBrick(BrickObjectData newObject)
+    /// <summary>
+    /// Add brick
+    /// </summary>
+    /// <param name="newObject"></param>
+    private void AddBrick(GroundBrick newObject)
     {
+        // Object pooling
 
     }
 
@@ -138,6 +145,8 @@ public class Character : ColorObject
     {
 
     }
+
+
 
 
 

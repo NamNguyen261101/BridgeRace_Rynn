@@ -1266,17 +1266,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
   m_PrefabInstance: {fileID: 1906780035}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1014186044 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
-  m_PrefabInstance: {fileID: 1906780035}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1028297163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2990,7 +2979,6 @@ GameObject:
   - component: {fileID: 1804610109}
   - component: {fileID: 1804610108}
   - component: {fileID: 1804610107}
-  - component: {fileID: 1804610110}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3021,13 +3009,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804610105}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 681887ab761981c409b5136be547f8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 7c59e74f65ce8d049a443ebb4df39aee, type: 2}
   _renderer: {fileID: 1204133057}
+  _colorType: 3
   _anim: {fileID: 1516193577}
   _groundLayerMask:
     serializedVersion: 2
@@ -3089,34 +3078,6 @@ CapsuleCollider:
   m_Height: 1.9321983
   m_Direction: 1
   m_Center: {x: 0, y: 0.90004885, z: 0}
---- !u!114 &1804610110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804610105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272f8646627ce7545b5d120d096b14ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colorData: {fileID: 11400000, guid: 7c59e74f65ce8d049a443ebb4df39aee, type: 2}
-  _renderer: {fileID: 1204133057}
-  _anim: {fileID: 1516193577}
-  _groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  _stairlayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  _brickPrefabs: {fileID: 0}
-  _listBricks: []
-  brickContainer: {fileID: 0}
-  _joystick: {fileID: 1014186044}
-  _moveSpeed: 3
-  _rotateSpeed: 3
-  _rigi: {fileID: 1804610108}
 --- !u!1 &1809180266
 GameObject:
   m_ObjectHideFlags: 0

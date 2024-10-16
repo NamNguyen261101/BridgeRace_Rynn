@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorObject : GameUnit
+public class ColorObject : GameUnit 
 {
     [SerializeField] private ColorData _colorData;
     [SerializeField] private Renderer _renderer;
-    protected ColorType _colorType;
+    [SerializeField] protected ColorType _colorType;
     
-    public ColorType ColorType
+    public ColorType ObjectColor
     {
         get
         {
-            return ColorType;
+            return _colorType;
         }
 
         set
         {
-            this.ColorType = value;
+            this._colorType = value;
         }
     }
 
     public void ChangeColor(ColorType colorType)
     {
-        this.ColorType = colorType;
-        _renderer.material = _colorData.GetColorMat(ColorType);
+        this.ObjectColor = colorType;
+        _renderer.material = _colorData.GetColorMat(ObjectColor);
     }
 
     public override void OnInit()

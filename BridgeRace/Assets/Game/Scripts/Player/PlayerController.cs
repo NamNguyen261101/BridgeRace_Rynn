@@ -6,9 +6,14 @@ public class PlayerController : Character
 {
     [SerializeField] private float speed = 5.0f;
 
+    private void Start()
+    {
+        OnInit();
+    }
     public override void OnInit()
     {
         base.OnInit();
+        ChangeColor(ObjectColor);
     }
 
     void Update()
@@ -26,11 +31,25 @@ public class PlayerController : Character
                 TransformObject.forward = JoyStick._direction;
             }
         }
-       /* if (Input.GetMouseButtonUp(0))
-        {
-            ChangeAnim(AnimationState.idle);
-        }*/
+        /* if (Input.GetMouseButtonUp(0))
+         {
+             ChangeAnim(AnimationState.idle);
+         }*/
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(CONSTANT.BRICK_GROUND))
+        {
+            ColorType brickColor = collision.GetComponent<GroundBrick>().ObjectColor;
+            if (ObjectColor == brickColor)
+            {
+                // do something
+                // AddBrick();
+            }
+        }
+    }
+
 
 
 }

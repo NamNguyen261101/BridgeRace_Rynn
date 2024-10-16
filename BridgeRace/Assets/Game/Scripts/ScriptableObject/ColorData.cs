@@ -16,11 +16,10 @@ public class ColorData : ScriptableObject
 
 public enum ColorType
 {
-    None = 0,
-    Red = 1,
-    Blue = 2,
-    Green = 3,
-    Pink = 4,
-    Yellow = 5,
-    Black = 6
+    Red = 0,
+    Blue = 1,
+    Green = 2,
+    Pink = 3,
+    Yellow = 4,
+    Black = 5
 }
