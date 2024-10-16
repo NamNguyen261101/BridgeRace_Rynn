@@ -24,7 +24,7 @@ public class Character : ColorObject
     private float _brickHeight = 0.1f;
 
     // Color Object - Depend for character and 
-    private ColorData _colorData;
+    
 
     #endregion 
     void Start()
@@ -130,6 +130,7 @@ public class Character : ColorObject
     private void AddBrick(GroundBrick newObject)
     {
         // Object pooling
+        // Sinh ra ben canh
 
     }
 
@@ -138,11 +139,14 @@ public class Character : ColorObject
     /// </summary>
     private void RemoveBrick()
     {
-
+        // List
+        // TOdo
+        // Xoa phan tu do di
     }
 
     private void ClearBrick()
     {
+        // Clear All
 
     }
 
