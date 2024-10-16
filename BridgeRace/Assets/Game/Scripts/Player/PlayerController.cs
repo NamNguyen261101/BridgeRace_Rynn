@@ -37,13 +37,14 @@ public class PlayerController : Character
          }*/
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag(CONSTANT.BRICK_GROUND))
+        if (collision.CompareTag("GroundBrick"))
         {
             ColorType brickColor = collision.GetComponent<GroundBrick>().ObjectColor;
             if (ObjectColor == brickColor)
             {
+                Debug.Log("brick caught");
                 // do something
                 // AddBrick();
             }

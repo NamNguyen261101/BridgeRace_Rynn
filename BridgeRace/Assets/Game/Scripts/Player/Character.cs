@@ -115,22 +115,18 @@ public class Character : ColorObject
         return true;
     }
 
-    public bool CanMoveToStair(Vector3 stairNextPosition)
-    {
-        if (Physics.Raycast(stairNextPosition + Vector3.up, Vector3.down, out _hit, 2f, _stairlayerMask))
-        {
-            return true;
-        }
-            return false;
-    }
+    
     /// <summary>
     /// Add brick
     /// </summary>
     /// <param name="newObject"></param>
-    private void AddBrick(GroundBrick newObject)
+    private void AddBrick()
     {
         // Object pooling
         // Sinh ra ben canh
+       GameObject newBrick = BrickPooling.Instance.GetBrick();
+        // newBrick.ChangeColor(ObjectColor);
+
 
     }
 

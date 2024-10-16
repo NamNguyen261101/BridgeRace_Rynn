@@ -553,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &307946835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,7 +3041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 7c59e74f65ce8d049a443ebb4df39aee, type: 2}
   _renderer: {fileID: 1204133057}
-  _colorType: 3
+  _colorType: 0
   _anim: {fileID: 1516193577}
   _groundLayerMask:
     serializedVersion: 2
@@ -3728,6 +3728,22 @@ PrefabInstance:
     - target: {fileID: 1029855599084822942, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025681092230374046, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025681092230374046, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025681092230374046, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025681092230374046, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6290514638642575270, guid: b3c4b801fd8e8864195c3a5248a01ad3, type: 3}
       propertyPath: m_Name

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class CONSTANT : MonoBehaviour
 {
-    public const string BRICK_GROUND = "BrickGround";
-    public const string BRICK_STAIR = "BrickStair";
+    public const string BRICK_GROUND = "GroundBrick";
+    public const string BRICK_STAIR = "StairBrick";
 }
